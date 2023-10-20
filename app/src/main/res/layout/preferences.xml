@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EE552727">
+
+    <TextView
+        android:id="@+id/preferencesText"
+        android:layout_width="380dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="20dp"
+        android:background="#6A6A6868"
+        android:text="@string/preferences"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#F4F3F3"
+        android:textSize="60sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck"
+        tools:text="Preferences" />
+
+    <Button
+        android:id="@+id/preferencesToMainButton"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:background="#2196F3"
+        android:onClick="backToMain"
+        android:text="@string/back_to_main"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerSwitch" />
+
+    <Switch
+        android:id="@+id/timerSwitch"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFDC00"
+        android:onClick="switchClick"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:text="@string/time_attack"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preferencesText">
+
+        <RadioButton
+            android:id="@+id/fourButtonRadioButton"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:background="#FF851B"
+            android:checked="true"
+            android:onClick="radioFourButtonClick"
+            android:paddingStart="5sp"
+            android:paddingEnd="5sp"
+            android:text="@string/four_button"
+            android:textAlignment="viewEnd"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/eightButtonRadioButton"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="#7ACA13D8"
+            android:onClick="radioEightButtonClick"
+            android:paddingStart="5sp"
+            android:paddingEnd="5sp"
+            android:text="@string/eight_button"
+            android:textAlignment="viewEnd"
+            android:textSize="18sp"
+            tools:ignore="TextContrastCheck" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8351111"
+    android:backgroundTint="#E9050C0C">
+
+    <TextView
+        android:id="@+id/mainMenuText"
+        android:layout_width="380dp"
+        android:layout_height="170dp"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="20dp"
+        android:background="#7C363E47"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#F4F3F3"
+        android:textColorHint="#FFFFFF"
+        android:textSize="60sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck"
+        tools:text="Extreme Simon" />
+
+    <Button
+        android:id="@+id/startGameButton"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="100dp"
+        android:background="#8BC34A"
+        android:onClick="startGame"
+        android:text="@string/start_game"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainMenuText" />
+
+    <Button
+        android:id="@+id/preferencesButton"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:background="#2196F3"
+        android:onClick="toPreferences"
+        android:text="@string/preferences"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startGameButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

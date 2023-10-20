@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A6070809">
+
+    <TextView
+        android:id="@+id/gameOverText"
+        android:layout_width="380dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="20dp"
+        android:background="#2F14171B"
+        android:text="@string/game_over"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#F4F3F3"
+        android:textColorHint="#FFFFFF"
+        android:textSize="60sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="140dp"
+        android:background="#8BC34A"
+        android:onClick="startGame"
+        android:text="@string/play_again"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameOverText" />
+
+    <Button
+        android:id="@+id/gameOverToMainButton"
+        android:layout_width="320dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:background="#2196F3"
+        android:onClick="backToMain"
+        android:text="@string/back_to_main"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playAgainButton" />
+
+    <TextView
+        android:id="@+id/finalScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-80dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/final_score"
+        android:textColor="#F6F5F5"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameOverText" />
+
+    <TextView
+        android:id="@+id/finalScoreValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text=""
+        android:textColor="#F6F5F5"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/finalScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/gameOverText"
+        tools:text="Num" />
+</androidx.constraintlayout.widget.ConstraintLayout>
